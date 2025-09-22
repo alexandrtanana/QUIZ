@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Молодёжный Квиз</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="screen active">
+            <div class="logo">
+                <h1>Quiz<span>Time</span></h1>
+            </div>
+            <p>Проверь свои знания в этом увлекательном квизе!</p>
+            <button id="start-btn" class="btn">Начать квиз</button>
+        </div>
+
+        <div id="quiz-screen" class="screen">
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="question-count">Вопрос <span id="current">1</span> из <span id="total">5</span></div>
+            </div>
+            
+            <div class="question-container">
+                <h2 id="question"></h2>
+                <div id="options" class="options"></div>
+            </div>
+            
+            <button id="next-btn" class="btn hidden">Следующий вопрос</button>
+        </div>
+
+        <div id="result-screen" class="screen">
+            <div class="result-container">
+                <h2>Результаты</h2>
+                <div class="score">Твой результат: <span id="score">0</span> из <span id="max-score">5</span></div>
+                <p id="result-message"></p>
+                <button id="restart-btn" class="btn">Пройти ещё раз</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
